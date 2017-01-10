@@ -1,57 +1,75 @@
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Keynote</title>
-        <link href="KeynoteDHTMLPlayer.css" rel="stylesheet" type="text/css" media="screen"/>
-        <meta name="viewport" content="initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <script type="text/javascript" src="prototype.js"></script>
-        <script type="text/javascript" src="DebuggingSupport.js"></script>
-        <script type="text/javascript" src="string.js"></script>
-        <script type="text/javascript" src="Utilities.js"></script>
-        <script type="text/javascript" src="KeynoteDHTMLPlayer.js"></script>
-        <script type="text/javascript" src="ShowController.js"></script>
-        <script type="text/javascript" src="TouchController.js"></script>
-        <script type="text/javascript" src="DisplayManager.js"></script>
-        <script type="text/javascript" src="StageManager.js"></script>
-        <script type="text/javascript" src="AnimationManager.js"></script>
-        <script type="text/javascript" src="TextureManager.js"></script>
-        <script type="text/javascript" src="ScriptManager.js"></script>
-        <script type="text/javascript" src="OrientationController.js"></script>
-        <script type="text/javascript" src="KPFObjects.js"></script>
-        <script type="text/javascript" src="SlideManager.js"></script>
-        <script type="text/javascript" src="NavigatorController.js"></script>
-        <script type="text/javascript" src="SlideNumberController.js"></script>
-        <script type="text/javascript" src="HelpPlacardController.js"></script>
-        <script type="text/javascript" src="NarrationManager.js"></script>
-	</head>
-    <body id="body" bgcolor="black">
-        <div id="background" class="bigBlackSquare">
-        </div>
-        <div id="previousButton" class="PreviousButtonDisabled">
-        </div>
-        <div id="nextButton" class="nextButtonDisabled">
-        </div>
-        <div id="slideCounter">
-        </div>
-        <span id="helpText"></span>
-        <div id="stageArea">
-            <div id="stage" class="stage">
-            </div>
-            <div id="hyperlinkPlane" class="stage">
-            </div>
-        </div>
-        <div id="slideshowNavigator">
-        </div>
-        <div id="slideNumberControl">
-        </div>
-        <div id="slideNumberDisplay">
-        </div>
-        <div id="helpPlacard">
-        </div>
-        <div id="waitingIndicator">
-        	<div id="waitingSpinner">
-        	</div>
-        </div>
-	</body>
+<head>
+<meta charset="utf-8"/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<link rel="stylesheet" href="base.min.css"/>
+<link rel="stylesheet" href="fancy.min.css"/>
+<link rel="stylesheet" href="main.css"/>
+<script src="compatibility.min.js"></script>
+<script src="theViewer.min.js"></script>
+<script>
+try{
+theViewer.defaultViewer = new theViewer.Viewer({});
+}catch(e){}
+</script>
+<title></title>
+</head>
+<body>
+<div id="sidebar">
+<div id="outline">
+</div>
+</div>
+<div id="page-container">
+<div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg1.png"/><div class="t m0 x1 h1 y1 ff1 fs0 fc0 sc0 ls0 ws0">指導教授<span class="ff2"> </span></div><div class="t m0 x2 h1 y2 ff1 fs0 fc0 sc0 ls0 ws0">謝舒凱<span class="ff2"> </span>教授<span class="ff2"> </span></div><div class="t m0 x3 h1 y3 ff2 fs0 fc0 sc0 ls0 ws0">T<span class="_ _0"></span>eam10 <span class="ff1">學</span> </div><div class="t m0 x4 h1 y4 ff2 fs0 fc0 sc0 ls0 ws0">B02611013 <span class="ff1">機四</span> <span class="ff1">黃薇甄</span> </div><div class="t m0 x4 h1 y5 ff2 fs0 fc0 sc0 ls0 ws0">B02704033 <span class="ff1">國企四</span> <span class="ff1">張景淵</span> </div><div class="t m0 x4 h1 y6 ff2 fs0 fc0 sc0 ls0 ws0">B02705002 <span class="ff1">資管四</span> <span class="ff1">周晅瑢</span> </div><div class="t m0 x4 h1 y7 ff2 fs0 fc0 sc0 ls0 ws0">B02705006 <span class="ff1">資管四</span> <span class="ff1">󰕜偉立</span> </div><div class="t m0 x4 h1 y8 ff2 fs0 fc0 sc0 ls0 ws0">B02705027 <span class="ff1">資管四</span> <span class="ff1">陳信豪</span> </div><div class="t m0 x4 h1 y9 ff2 fs0 fc0 sc0 ls0 ws0">B02705028 <span class="ff1">資管四</span> <span class="ff1">冷俊瑩</span> </div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf2" class="pf w0 h0" data-page-no="2"><div class="pc pc2 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg2.png"/><div class="t m0 x5 h2 ya ff3 fs1 fc0 sc0 ls1 ws0">INTR<span class="_ _1"></span>ODUCTION</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf3" class="pf w0 h0" data-page-no="3"><div class="pc pc3 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg3.png"/><div class="t m0 x6 h3 yb ff4 fs0 fc1 sc0 ls0 ws0">https://www<span class="_ _2"></span>.zhihu.com/<span class="ff5 fc0">!</span></div><div class="t m0 x7 h1 yc ff1 fs0 fc0 sc0 ls0 ws0">中國（世界）最的<span class="ff2"> QA </span>問答社群</div><a class="l" href="https://www.zhihu.com/"><div class="d m1" style="border-style:none;position:absolute;left:377.343800px;bottom:210.875000px;width:269.312400px;height:33.000000px;background-color:rgba(255,255,255,0.000001);"></div></a></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf4" class="pf w0 h0" data-page-no="4"><div class="pc pc4 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg4.png"/><div class="t m0 x8 h1 yd ff1 fs0 fc0 sc0 ls0 ws0">中國的<span class="ff2">...</span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf5" class="pf w0 h0" data-page-no="5"><div class="pc pc5 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg5.png"/><div class="t m0 x2 h4 ye ff6 fs2 fc0 sc0 ls0 ws0">話題多元</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf6" class="pf w0 h0" data-page-no="6"><div class="pc pc6 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg6.png"/><div class="t m0 x2 h4 ye ff6 fs2 fc0 sc0 ls0 ws0">󲸜眾多</div><div class="t m0 x9 h1 yf ff1 fs0 fc0 sc0 ls0 ws0">千萬以上的使󲸜</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf7" class="pf w0 h0" data-page-no="7"><div class="pc pc7 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg7.png"/><div class="t m0 x2 h4 ye ff6 fs2 fc0 sc0 ls0 ws0">本豐富</div><div class="t m0 xa h3 y10 ff4 fs0 fc2 sc0 ls0 ws0">ONE ANSWER</div><div class="t m0 xb h3 y8 ff4 fs0 fc2 sc0 ls0 ws0">ONE QUESTION</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf8" class="pf w0 h0" data-page-no="8"><div class="pc pc8 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg8.png"/><div class="t m0 xc h2 y11 ff3 fs1 fc0 sc0 ls2 ws0">DA<span class="_ _3"></span>T<span class="_ _4"></span>A</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf9" class="pf w0 h0" data-page-no="9"><div class="pc pc9 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg9.png"/><div class="t m0 xd h3 y12 ff4 fs0 fc1 sc0 ls0 ws0">https://github.com/7sDr<span class="_ _5"></span>eam</div><div class="t m0 x6 h1 y13 ff1 fs0 fc0 sc0 ls0 ws0">非知乎官的<span class="ff2"> Python API</span></div><div class="t m0 xe h1 y14 ff1 fs0 fc0 sc0 ls0 ws0">選擇不同話題下的熱󵃺問題󲈶爬取資料</div><a class="l" href="https://github.com/7sDream"><div class="d m1" style="border-style:none;position:absolute;left:351.750000px;bottom:367.500000px;width:320.500000px;height:33.000000px;background-color:rgba(255,255,255,0.000001);"></div></a></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfa" class="pf w0 h0" data-page-no="a"><div class="pc pca w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bga.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfb" class="pf w0 h0" data-page-no="b"><div class="pc pcb w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bgb.png"/><div class="c xf y15 w1 h5"><div class="t m0 x10 h6 y16 ff4 fs3 fc3 sc0 ls3 ws0">21 <span class="ff6 ls0">份<span class="_ _6"></span><span class="ff4"> <span class="_ _6"></span></span></span>DA<span class="_ _0"></span>T<span class="_ _0"></span>ASET </div></div><div class="c x11 y15 w2 h5"><div class="t m0 x10 h6 y16 ff4 fs3 fc3 sc0 ls3 ws0">17 <span class="ff6 ls0">種<span class="_ _6"></span></span> V<span class="_ _2"></span>ARIABLE </div></div><div class="c x12 y15 w3 h5"><div class="t m0 x10 h6 y16 ff4 fs3 fc3 sc0 ls3 ws0">1,300,000 <span class="ff6 ls0">筆<span class="_ _6"></span><span class="ff4"> <span class="_ _6"></span></span></span>DA<span class="_ _0"></span>T<span class="_ _0"></span>A </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfc" class="pf w0 h0" data-page-no="c"><div class="pc pcc w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bgc.png"/><div class="t m0 x13 h2 y11 ff3 fs1 fc0 sc0 ls4 ws0">PREPR<span class="_ _1"></span>OCE<span class="_ _7"></span>SSING</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfd" class="pf w0 h0" data-page-no="d"><div class="pc pcd w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bgd.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfe" class="pf w0 h0" data-page-no="e"><div class="pc pce w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bge.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pff" class="pf w0 h0" data-page-no="f"><div class="pc pcf w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bgf.png"/><div class="t m0 x14 h3 y17 ff4 fs0 fc0 sc0 ls0 ws0">STOP WORDS </div><div class="t m0 x15 h7 y18 ff6 fs0 fc0 sc0 ls0 ws0">取前<span class="ff4"> df </span>值最󰕜的<span class="ff4"> 2.5% </span>詞彙</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf10" class="pf w0 h0" data-page-no="10"><div class="pc pc10 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg10.png"/><div class="t m0 xb h2 y19 ff3 fs1 fc0 sc0 ls5 ws0">TEXT T<span class="_ _8"></span>OPIC </div><div class="t m0 x16 h2 y1a ff3 fs1 fc0 sc0 ls5 ws0">OBSER<span class="_ _9"></span>VING</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf11" class="pf w0 h0" data-page-no="11"><div class="pc pc11 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg11.png"/><div class="t m0 x17 h8 y1b ff4 fs2 fc0 sc0 ls0 ws0">W<span class="_ _5"></span>or<span class="_ _3"></span>d Cloud</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf12" class="pf w0 h0" data-page-no="12"><div class="pc pc12 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg12.png"/><div class="t m0 x1 h8 y1c ff4 fs2 fc0 sc0 ls0 ws0">TF-IDF </div><div class="t m0 x17 h8 y1d ff4 fs2 fc0 sc0 ls0 ws0">Keywor<span class="_ _5"></span>ds</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf13" class="pf w0 h0" data-page-no="13"><div class="pc pc13 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg13.png"/><div class="t m0 x18 h8 y1e ff4 fs2 fc0 sc0 ls0 ws0">LDA </div><div class="t m0 x19 h8 y1f ff4 fs2 fc0 sc0 ls0 ws0">(T<span class="_ _a"></span>opics in T<span class="_ _a"></span>opics)</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf14" class="pf w0 h0" data-page-no="14"><div class="pc pc14 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg14.png"/><div class="t m0 x15 h2 y11 ff3 fs1 fc0 sc0 ls1 ws0">GO<span class="_ _b"></span>AL</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf15" class="pf w0 h0" data-page-no="15"><div class="pc pc15 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg15.png"/><div class="t m0 x18 h4 y20 ff6 fs2 fc4 sc0 ls0 ws0">知乎<span class="ff4"> </span></div><div class="t m0 x1a h1 y21 ff1 fs0 fc0 sc0 ls0 ws0">既然你誠誠意的發問，我們就發慈悲的回答你！</div><div class="t m0 x14 h4 y22 ff6 fs2 fc4 sc0 ls0 ws0">我們的專案<span class="ff4"> </span></div><div class="t m0 x1b h1 y23 ff1 fs0 fc0 sc0 ls0 ws0">既然你誠誠意的回答，我們就發慈悲的幫你打分數！</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf16" class="pf w0 h0" data-page-no="16"><div class="pc pc16 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg16.png"/><div class="c x1c y24 w4 h9"><div class="t m0 x1d ha y25 ff6 fs4 fc3 sc0 ls6 ws0">贊同數＊<span class="ff4">LOG(</span>回應時間<span class="ff4 ls0">)</span></div></div><div class="t m0 x1e h1 y26 ff1 fs0 fc0 sc0 ls0 ws0">定義篇回答章的品質</div><div class="t m0 x1f h1 y27 ff2 fs0 fc0 sc0 ls0 ws0">(<span class="ff1">回應時間</span> = <span class="ff1">回答發表時間</span> - <span class="ff1">問題發表時間</span>)</div><div class="t m0 x20 hb y28 ff7 fs5 fc5 sc0 ls0 ws0">median</div><div class="t m0 x21 hc y29 ff7 fs0 fc5 sc0 ls0 ws0">bad Answer</div><div class="t m0 x1d hc y2a ff7 fs0 fc5 sc0 ls0 ws0">good Answer</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf17" class="pf w0 h0" data-page-no="17"><div class="pc pc17 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg17.png"/><div class="c x1c y2b w5 h9"><div class="t m0 x22 hd y2c ff4 fs4 fc3 sc0 ls6 ws0">SVM </div><div class="t m0 x23 hd y2d ff4 fs4 fc3 sc0 ls6 ws0">PROBABILITY </div><div class="t m0 x24 hd y2e ff4 fs4 fc3 sc0 ls6 ws0">(ONE AGAINST ALL)</div></div><div class="t m0 x1e h1 y2f ff1 fs0 fc0 sc0 ls0 ws0">定義篇回答章的分數<span class="ff2"> </span></div><div class="t m0 x25 h1 y30 ff1 fs0 fc0 sc0 ls0 ws0">你的回答在<span class="ff2"> SVM </span>模型裡<span class="ff2"> </span></div><div class="t m0 xd h1 y31 ff1 fs0 fc0 sc0 ls0 ws0">有多少比接近<span class="ff2"> good Answer</span></div><div class="t m0 x26 h3 y32 ff4 fs0 fc6 sc0 ls0 ws0">good Answer<span class="_ _c"> </span>bad Answer</div><div class="t m0 x27 h3 y33 ff2 fs0 fc7 sc0 ls0 ws0">73%<span class="_ _d"> </span>27%</div><div class="t m0 x28 he y34 ff4 fs3 fc8 sc0 ls0 ws0">Scor<span class="_ _5"></span>e: 73!</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf18" class="pf w0 h0" data-page-no="18"><div class="pc pc18 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg18.png"/><div class="c x1c y24 w5 h9"><div class="t m0 x22 hd y35 ff4 fs4 fc3 sc0 ls6 ws0">SVM </div><div class="t m0 x23 hd y36 ff4 fs4 fc3 sc0 ls6 ws0">PROBABILITY </div><div class="t m0 x29 hd y37 ff4 fs4 fc3 sc0 ls6 ws0">(OAO)</div></div><div class="c x2a y38 w6 hf"><div class="t m0 x2b h10 y39 ff4 fs6 fc3 sc0 ls7 ws0">ESSA<span class="_ _2"></span>Y<span class="ff5 ls0">!</span></div><div class="t m0 x2c h10 y3a ff4 fs6 fc3 sc0 ls7 ws0">SIMILARITY</div></div><div class="c x2d y3b w7 h11"><div class="t m0 x2e h10 y3c ff4 fs6 fc3 sc0 ls7 ws0">SENTIMENT </div><div class="t m0 x2f h10 y3d ff4 fs6 fc3 sc0 ls7 ws0">SCORE</div></div><div class="c x30 y3e w6 hf"><div class="t m0 x31 h10 y3f ff4 fs6 fc3 sc0 ls7 ws0">WORD<span class="ff5 ls0">!</span></div><div class="t m0 x32 h10 y40 ff4 fs6 fc3 sc0 ls7 ws0">COUNT</div></div><div class="c x33 y3e w8 hf"><div class="t m0 x34 h10 y41 ff4 fs6 fc3 sc0 ls7 ws0">STOP </div><div class="t m0 x31 h10 y42 ff4 fs6 fc3 sc0 ls7 ws0">WORD </div><div class="t m0 x35 h10 y43 ff4 fs6 fc3 sc0 ls7 ws0">COUNT</div></div><div class="c x36 y44 w9 h9"><div class="t m0 x37 h10 y45 ff4 fs6 fc3 sc0 ls7 ws0">CHARACTER<span class="ff5 ls0">!</span></div><div class="t m0 x38 h10 y46 ff4 fs6 fc3 sc0 ls7 ws0">COUNT</div></div><div class="c x39 y47 wa h12"><div class="t m0 x2c h10 y48 ff4 fs6 fc3 sc0 ls7 ws0">CLUSTERING </div><div class="t m0 x3a h10 y49 ff4 fs6 fc3 sc0 ls7 ws0">FEA<span class="_ _4"></span>TURES</div></div><div class="c x3b y4a w9 h12"><div class="t m0 x3c h10 y4b ff4 fs6 fc3 sc0 ls7 ws0">AUTHOR </div><div class="t m0 x3d h10 y4c ff4 fs6 fc3 sc0 ls7 ws0">INFORMA<span class="_ _4"></span>TION</div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf19" class="pf w0 h0" data-page-no="19"><div class="pc pc19 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg19.png"/><div class="t m0 x3e h2 y11 ff3 fs1 fc0 sc0 ls4 ws0">SENTI<span class="_ _7"></span>MEN<span class="_ _7"></span>T</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf1a" class="pf w0 h0" data-page-no="1a"><div class="pc pc1a w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg1a.png"/><div class="t m0 x1 h1 y4d ff1 fs0 fc0 sc0 ls0 ws0">情感分數</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf1b" class="pf w0 h0" data-page-no="1b"><div class="pc pc1b w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg1b.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf1c" class="pf w0 h0" data-page-no="1c"><div class="pc pc1c w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg1c.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf1d" class="pf w0 h0" data-page-no="1d"><div class="pc pc1d w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg1d.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf1e" class="pf w0 h0" data-page-no="1e"><div class="pc pc1e w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg1e.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf1f" class="pf w0 h0" data-page-no="1f"><div class="pc pc1f w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg1f.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf20" class="pf w0 h0" data-page-no="20"><div class="pc pc20 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg20.png"/><div class="t m0 x3f h2 y11 ff3 fs1 fc0 sc0 ls4 ws0">SIMI<span class="_ _7"></span>LAR<span class="_ _7"></span>ITY</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf21" class="pf w0 h0" data-page-no="21"><div class="pc pc21 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg21.png"/><div class="t m0 x40 h1 y4e ff1 fs0 fc0 sc0 ls0 ws0">如何計算本相似度？<span class="ff2"> </span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf22" class="pf w0 h0" data-page-no="22"><div class="pc pc22 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg22.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf23" class="pf w0 h0" data-page-no="23"><div class="pc pc23 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg23.png"/><div class="t m0 x26 h2 ya ff3 fs1 fc0 sc0 ls8 ws0">CL<span class="_ _e"></span>USTERING</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf24" class="pf w0 h0" data-page-no="24"><div class="pc pc24 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg24.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf25" class="pf w0 h0" data-page-no="25"><div class="pc pc25 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg25.png"/><div class="t m0 x41 h1 y4f ff1 fs0 fc0 sc0 ls0 ws0">我們認為分群後<span class="ff5">!</span></div><div class="t m0 x42 h1 y34 ff1 fs0 fc0 sc0 ls0 ws0">章與各群簇的「接近度」可以視為本的某種特徵<span class="ff2"> </span></div><div class="t m0 x1f h1 y50 ff1 fs0 fc0 sc0 ls0 ws0">因此我們將此視為<span class="ff2"> featur<span class="_ _5"></span>es <span class="ff1">嘗試餵給</span> SVM</span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf26" class="pf w0 h0" data-page-no="26"><div class="pc pc26 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg26.png"/><div class="t m0 x43 h2 y11 ff3 fs1 fc0 sc0 ls4 ws0">SVM</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf27" class="pf w0 h0" data-page-no="27"><div class="pc pc27 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg27.png"/><div class="c x1c y24 w5 h9"><div class="t m0 x22 hd y35 ff4 fs4 fc3 sc0 ls6 ws0">SVM </div><div class="t m0 x23 hd y36 ff4 fs4 fc3 sc0 ls6 ws0">PROBABILITY </div><div class="t m0 x29 hd y37 ff4 fs4 fc3 sc0 ls6 ws0">(OAO)</div></div><div class="c x2a y38 w6 hf"><div class="t m0 x2b h10 y39 ff4 fs6 fc3 sc0 ls7 ws0">ESSA<span class="_ _2"></span>Y<span class="ff5 ls0">!</span></div><div class="t m0 x2c h10 y3a ff4 fs6 fc3 sc0 ls7 ws0">SIMILARITY</div></div><div class="c x2d y3b w7 h11"><div class="t m0 x2e h10 y3c ff4 fs6 fc3 sc0 ls7 ws0">SENTIMENT </div><div class="t m0 x2f h10 y3d ff4 fs6 fc3 sc0 ls7 ws0">SCORE</div></div><div class="c x30 y3e w6 hf"><div class="t m0 x31 h10 y3f ff4 fs6 fc3 sc0 ls7 ws0">WORD<span class="ff5 ls0">!</span></div><div class="t m0 x32 h10 y40 ff4 fs6 fc3 sc0 ls7 ws0">COUNT</div></div><div class="c x33 y3e w8 hf"><div class="t m0 x34 h10 y41 ff4 fs6 fc3 sc0 ls7 ws0">STOP </div><div class="t m0 x31 h10 y42 ff4 fs6 fc3 sc0 ls7 ws0">WORD </div><div class="t m0 x35 h10 y43 ff4 fs6 fc3 sc0 ls7 ws0">COUNT</div></div><div class="c x36 y44 w9 h9"><div class="t m0 x37 h10 y45 ff4 fs6 fc3 sc0 ls7 ws0">CHARACTER<span class="ff5 ls0">!</span></div><div class="t m0 x38 h10 y46 ff4 fs6 fc3 sc0 ls7 ws0">COUNT</div></div><div class="c x39 y47 wa h12"><div class="t m0 x2c h10 y48 ff4 fs6 fc3 sc0 ls7 ws0">CLUSTERING </div><div class="t m0 x3a h10 y49 ff4 fs6 fc3 sc0 ls7 ws0">FEA<span class="_ _4"></span>TURES</div></div><div class="c x3b y4a w9 h12"><div class="t m0 x3c h10 y4b ff4 fs6 fc3 sc0 ls7 ws0">AUTHOR </div><div class="t m0 x3d h10 y4c ff4 fs6 fc3 sc0 ls7 ws0">INFORMA<span class="_ _4"></span>TION</div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf28" class="pf w0 h0" data-page-no="28"><div class="pc pc28 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg28.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf29" class="pf w0 h0" data-page-no="29"><div class="pc pc29 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg29.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf2a" class="pf w0 h0" data-page-no="2a"><div class="pc pc2a w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg2a.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf2b" class="pf w0 h0" data-page-no="2b"><div class="pc pc2b w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg2b.png"/></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf2c" class="pf w0 h0" data-page-no="2c"><div class="pc pc2c w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="bg2c.png"/><div class="t m0 xb h2 y11 ff3 fs1 fc0 sc0 ls5 ws0">THANK Y<span class="_ _f"></span>OU</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+</div>
+<div class="loading-indicator">
+
+</div>
+</body>
 </html>
