@@ -7,7 +7,7 @@ source('read_data.R')
 
 navbarPage( theme = shinytheme("spacelab"),
   #shinythemes::themeSelector(),
-  HTML("DSR Team 10: 知乎: <a>https://oomegappandda.shinyapps.io/shiny_dsr_zhihu/</a>"),
+  HTML("DSR Team 10: 知乎: <a href='https://oomegappandda.shinyapps.io/shiny_dsr_zhihu/'>https://oomegappandda.shinyapps.io/shiny_dsr_zhihu/</a>"),
   
   tabPanel('Introduction',
            fluidPage(
@@ -405,7 +405,13 @@ navbarPage( theme = shinytheme("spacelab"),
              HTML("<br><hr><br></center>")
              
            )
-           ))
+           )),
   
   #tabPanel('Team Member')
+  
+
+  tags$style(type="text/css",
+             ".shiny-output-error { visibility: hidden; }",
+             ".shiny-output-error:before { visibility: hidden; }"
+)
 )
