@@ -1,9 +1,15 @@
 library(readr)
 library(dplyr)
 library(tidytext)
+library(wordcloud)
 source('zhihu_preprocessing.R')
 source('zhihu_function.R')
 
+
+
+# READ IN ZHIHU DATA
+
+# 讀取位於  data_collect 底下的所有 csv 檔
 all_data_file <- list.files('./data_collect', pattern="*.csv")
 
 
@@ -28,6 +34,14 @@ for (i in (2:length(all_data_file))){
 
 
 
+
+
+
+
+
+
+# STOP WORD
+
 # question_combined <- paste(all_data$question_title, all_data$question_detail)
 # doc <- c(unique(all_data$question_combined),unique(all_data$ans))
 # all_stop_word <- get_stop_word(unique(doc))
@@ -45,12 +59,21 @@ all_stop_word <- readLines('all_stop_word.txt')
 
 
 
+
+
+
+
+# SENTIMENT DICTIONARY
+
+# source1: NTUSD
 # positive_dict <- read_csv('./ntusd/traditional_ntusd_positive.csv')$x
 # negative_dict <- read_csv('./ntusd/traditional_ntusd_negative.csv')$x
 # 
+# source2: der3318
 # positive_dict <- unique(c(positive_dict,read_csv('./der3318/positive.csv')$x))
 # negative_dict <- unique(c(negative_dict,read_csv('./der3318/negative.csv')$x))
 # 
+# source3: tidytext bing
 # bing <- get_sentiments("bing")
 # positive_dict <- unique(c(positive_dict,bing[bing$sentiment=='positive',]$word))
 # negative_dict <- unique(c(negative_dict,bing[bing$sentiment=='negative',]$word))
@@ -59,7 +82,16 @@ all_stop_word <- readLines('all_stop_word.txt')
 # write.csv(positive_dict, 'all_positive.csv', row.names = F)
 # write.csv(negative_dict, 'all_negative.csv', row.names = F)
 
+
+
+
 positive_dict <- read_csv('all_positive.csv')$x
 negative_dict <- read_csv('all_negative.csv')$x
+
+
+
+
+
+
 
 

@@ -1,8 +1,4 @@
-
-library(wordcloud)
-library(dplyr)
-
-
+# 情感分數
 output$senti_score <- renderText({
   pos_words <- positive_dict
   neg_words <- negative_dict
@@ -21,7 +17,7 @@ output$senti_score <- renderText({
 })
 
 
-
+# 情感 pikachu 圖
 output$senti_image <- renderImage({
   
   
@@ -92,7 +88,7 @@ output$senti_image <- renderImage({
 
 
 
-
+# 情感 histogram
 output$senti_hist <- renderPlot({
   
   input$senti_text
@@ -120,7 +116,7 @@ output$senti_hist <- renderPlot({
 })
 
 
-
+# 情感正向詞彙 word cloud
 output$senti_pos_word_cloud <- renderPlot({
   
   
@@ -165,7 +161,7 @@ output$senti_pos_word_cloud <- renderPlot({
 
 
 
-
+# 情感負向詞彙 word cloud
 output$senti_neg_word_cloud <- renderPlot({
   
   

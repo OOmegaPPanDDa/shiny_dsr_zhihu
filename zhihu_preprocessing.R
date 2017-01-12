@@ -87,8 +87,11 @@ clean_text <-  function(text){
 
 
 
+
+
+
+
 # 取得 stop word
-# library jiebaR at first
 get_stop_word <- function(document){
   
   # seg_worker <- worker()
@@ -144,6 +147,12 @@ get_stop_word <- function(document){
 }
 
 
+
+
+
+
+
+
 get_stop_word_df <- function(document){
   
   # seg_worker <- worker()
@@ -171,34 +180,6 @@ get_stop_word_df <- function(document){
   
   return (stop_word_df)
 }
-
-
-
-# 排除未被按讚答案
-number_filter <- function(df) {
-  return(subset(df, df$ans_upvote_num != 0))
-}
-
-
-# clean_text and omit na
-text_filter <- function(df) {
-  
-  # Remove symbols 
-  df$question_title <- clean_text(df$question_title)
-  df$question_detail <- clean_text(df$question_detail)
-  df$ans <- clean_text(df$ans)
-  
-  
-  df$question_title[is.na(df$question_title)] <- ''
-  df$question_detail[is.na(df$question_detail)] <- ''
-  df$ans[is.na(df$ans)] <- ''
-  # Remove empty rows or NA
-  df[df==""] <- NA
-  return(df %>% na.omit())
-}
-
-
-
 
 
 # Example of Using

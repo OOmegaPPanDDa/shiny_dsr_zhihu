@@ -3,9 +3,7 @@ library(dplyr)
 library(ggplot2)
 
 
-# dataset <- read_csv(NULL)
-# View(dataset)
-
+# 各 dataset 的資料數目
 output$num_observe_hist <- renderPlot({
   
   num_observe_all_data <<- all_data %>% filter(topic %in% input$num_observe_dataset)
@@ -25,7 +23,7 @@ output$num_observe_hist <- renderPlot({
 })
 
 
-
+# voteup 與 回應時間的關係
 output$num_observe_time_span <- renderPlot({
   
   input$num_observe_dataset
@@ -40,6 +38,8 @@ output$num_observe_time_span <- renderPlot({
 })
 
 
+
+# voteup 與 回應時間的關係
 output$num_observe_time_span_color <- renderPlot({
   
   input$num_observe_dataset
@@ -54,6 +54,9 @@ output$num_observe_time_span_color <- renderPlot({
   })
 
 
+
+
+# voteup 與 回答者總讚數的關係
 output$num_observe_author_upvote <- renderPlot({
   
   input$num_observe_dataset
@@ -68,6 +71,9 @@ output$num_observe_author_upvote <- renderPlot({
   
 })
 
+
+
+# voteup 與 回答者總讚數的關係
 output$num_observe_author_upvote_color <- renderPlot({
   
   input$num_observe_dataset
@@ -82,6 +88,8 @@ output$num_observe_author_upvote_color <- renderPlot({
   
 })
 
+
+# voteup 與 回答者被追蹤數的關係
 output$num_observe_author_follower <- renderPlot({
   
   input$num_observe_dataset
@@ -96,6 +104,10 @@ output$num_observe_author_follower <- renderPlot({
   
 })
 
+
+
+
+# voteup 與 回答者被追蹤數的關係
 output$num_observe_author_follower_color <- renderPlot({
   
   input$num_observe_dataset
@@ -110,6 +122,9 @@ output$num_observe_author_follower_color <- renderPlot({
   
 })
 
+
+
+# voteup 與 回答者追蹤數的關係
 output$num_observe_author_followee <- renderPlot({
   
   input$num_observe_dataset
@@ -124,6 +139,8 @@ output$num_observe_author_followee <- renderPlot({
   
 })
 
+
+# voteup 與 回答者追蹤數的關係
 output$num_observe_author_followee_color <- renderPlot({
   
   input$num_observe_dataset
@@ -138,6 +155,9 @@ output$num_observe_author_followee_color <- renderPlot({
   
 })
 
+
+
+# voteup 與 回答者總感謝數的關係
 output$num_observe_author_thank <- renderPlot({
   
   input$num_observe_dataset
@@ -153,6 +173,8 @@ output$num_observe_author_thank <- renderPlot({
 })
 
 
+
+# voteup 與 回答者總感謝數的關係
 output$num_observe_author_thank_color <- renderPlot({
   
   input$num_observe_dataset
@@ -167,6 +189,9 @@ output$num_observe_author_thank_color <- renderPlot({
   
 })
 
+
+
+# voteup 與 回答者發問數的關係
 output$num_observe_author_question <- renderPlot({
   
   input$num_observe_dataset
@@ -181,6 +206,9 @@ output$num_observe_author_question <- renderPlot({
   
 })
 
+
+
+# voteup 與 回答者發問數的關係
 output$num_observe_author_question_color <- renderPlot({
   
   input$num_observe_dataset
@@ -195,6 +223,9 @@ output$num_observe_author_question_color <- renderPlot({
   
 })
 
+
+
+# voteup 與 回答者回答數的關係
 output$num_observe_author_answer <- renderPlot({
   
   input$num_observe_dataset
@@ -209,6 +240,9 @@ output$num_observe_author_answer <- renderPlot({
   
 })
 
+
+
+# voteup 與 回答者回答數的關係
 output$num_observe_author_answer_color <- renderPlot({
   
   input$num_observe_dataset
@@ -223,6 +257,9 @@ output$num_observe_author_answer_color <- renderPlot({
   
 })
 
+
+
+# voteup 與 回答者發表文章數的關係
 output$num_observe_author_post <- renderPlot({
   
   input$num_observe_dataset
@@ -237,6 +274,8 @@ output$num_observe_author_post <- renderPlot({
   
 })
 
+
+# voteup 與 回答者發表文章數的關係
 output$num_observe_author_post_color <- renderPlot({
   
   input$num_observe_dataset
@@ -251,6 +290,9 @@ output$num_observe_author_post_color <- renderPlot({
   
 })
 
+
+
+# voteup 與 該回答被收藏次數的關係
 output$num_observe_ans_collect <- renderPlot({
   
   input$num_observe_dataset
@@ -265,6 +307,8 @@ output$num_observe_ans_collect <- renderPlot({
   
 })
 
+
+# voteup 與 該回答被收藏次數的關係
 output$num_observe_ans_collect_color <- renderPlot({
   
   input$num_observe_dataset
@@ -279,6 +323,9 @@ output$num_observe_ans_collect_color <- renderPlot({
   
 })
 
+
+
+# voteup 與 該回答被評論次數的關係
 output$num_observe_ans_comment <- renderPlot({
   
   input$num_observe_dataset
@@ -293,6 +340,9 @@ output$num_observe_ans_comment <- renderPlot({
   
 })
 
+
+
+# voteup 與 該回答被評論次數的關係
 output$num_observe_ans_comment_color <- renderPlot({
   
   input$num_observe_dataset

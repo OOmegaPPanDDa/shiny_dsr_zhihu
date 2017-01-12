@@ -1,3 +1,5 @@
+
+# load 已經 train 好的 SVM model
 load('svm_model.rda')
 load('svm_question_detail.rda')
 load('svm_question_title.rda')
@@ -16,6 +18,9 @@ output$svm_question_detail <- renderText({
 })
 
 
+
+
+# 用 svm model predict 該回答者回答的分數
 output$svm_ans_quality <- renderText({
   
   if(input$svm_text=='Input your answer!'){

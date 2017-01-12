@@ -1,19 +1,11 @@
-
-library(wordcloud)
-
-
-# cutter = worker(dict = "www/jieba.dict.utf8", hmm = "www/hmm_model.utf8", user = "www/user.dict.utf8",
-#                 idf = "www/idf.utf8", stop_word ="www/stop_words.utf8")
-# keys = worker("keywords",dict = "www/jieba.dict.utf8", hmm = "www/hmm_model.utf8", user = "www/user.dict.utf8",
-#               idf = "www/idf.utf8", stop_word ="www/stop_words.utf8", topn = 10)
-
-
+# 經過 clean_text() 處理後的文本
 output$text_pre_clean_text <- renderText({
   clean_text <- clean_text(input$text_pre_text)
   clean_text
 })
 
 
+# stop word word cloud
 output$text_pre_all_stop_word_cloud <- renderPlot({
   # all_stop_word_df <- as.data.frame(matrix(all_stop_word[1:144], ncol = 12, nrow = 12))
   # colnames(all_stop_word_df) <- NULL
@@ -27,13 +19,13 @@ output$text_pre_all_stop_word_cloud <- renderPlot({
 })
 
 
-
+# stop word table
 output$text_pre_all_stop_word_df <- renderTable({
     all_stop_word_df[1:10,]
 })
 
 
-
+# 經過 jieba 斷詞並濾掉 stop word 的文本
 output$text_pre_filtered_text <- renderText({
   filtered_text <- filter_segment(seg_worker[clean_text(input$text_pre_text)], all_stop_word)
   filtered_text <- paste0(filtered_text, collapse = ' / ')

@@ -1,4 +1,3 @@
-
 library(rJava)
 library(tm)
 library(SnowballC)
@@ -27,28 +26,56 @@ library(Rwordseg)
 
 
 
+
+
+
+
+
+
+
+
+# 排除未被按讚答案
+number_filter <- function(df) {
+  return(subset(df, df$ans_upvote_num != 0))
+}
+
+
+
+
+
+
+
+# clean_text and omit na
+text_filter <- function(df) {
+  
+  # Remove symbols 
+  df$question_title <- clean_text(df$question_title)
+  df$question_detail <- clean_text(df$question_detail)
+  df$ans <- clean_text(df$ans)
+  
+  
+  df$question_title[is.na(df$question_title)] <- ''
+  df$question_detail[is.na(df$question_detail)] <- ''
+  df$ans[is.na(df$ans)] <- ''
+  # Remove empty rows or NA
+  df[df==""] <- NA
+  return(df %>% na.omit())
+}
+
+
+
+
+
+
+
+
+
+
+# Similarity
 space_tokenizer <- function(x){
   unlist(strsplit(as.character(x[[1]]),'[[:space:]]+'))
 }
 
-text_filter <- function(data_frame) {
-  # Keep only the columns with text
-  # data_frame <- data.frame(data_frame$question_title, data_frame$question_detail, data_frame$ans)
-  # colnames(data_frame) <- c("question_title","question_detail", "ans")
-  
-  # Remove symbols 
-  data_frame$question_title <- clean_text(data_frame$question_title)
-  data_frame$question_detail <- clean_text(data_frame$question_detail)
-  data_frame$ans <- clean_text(data_frame$ans)
-  
-  
-  data_frame$question_title[is.na(data_frame$question_title)] <- ''
-  data_frame$question_detail[is.na(data_frame$question_detail)] <- ''
-  data_frame$ans[is.na(data_frame$ans)] <- ''
-  
-  # Remove empty rows or NA
-  return(data_frame)
-}
 
 tf_idf_score <- function(df){
   # df <- text_filter(df)
@@ -116,10 +143,11 @@ tf_idf_score <- function(df){
 
 
 
+
+# Clustering
+
 # ans 是一在同一問題下的所有資料
 # ans 輸入進去後會回傳增加  km1, km2, km3, pc1, p2, pc3 的 dataframe
-
-
 get_cluster_feature <- function(ans, cluster_num){
   
   #cutter <- worker()

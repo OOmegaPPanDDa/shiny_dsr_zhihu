@@ -6,7 +6,7 @@ source('read_data.R')
 
 
 navbarPage( theme = shinytheme("spacelab"),
-  #shinythemes::themeSelector(),
+            
   HTML("DSR Team 10: 知乎: <a href='https://oomegappandda.shinyapps.io/shiny_dsr_zhihu/'>https://oomegappandda.shinyapps.io/shiny_dsr_zhihu/</a>"),
   
   tabPanel('Introduction',
@@ -41,6 +41,10 @@ navbarPage( theme = shinytheme("spacelab"),
            )
   ),
   
+  
+  
+  
+  
   tabPanel('Data Collecting', 
            fluidPage(
              titlePanel(h1('資料蒐集')),
@@ -64,6 +68,9 @@ navbarPage( theme = shinytheme("spacelab"),
                )
            )
   ),
+  
+  
+  
   
   tabPanel('Numeric Data Observing',
            fluidPage(
@@ -125,6 +132,10 @@ navbarPage( theme = shinytheme("spacelab"),
            )
   ),
   
+  
+  
+  
+  
   tabPanel('Text Preprocessing',
          fluidPage(
            titlePanel(h1('文本前處理')),
@@ -169,6 +180,10 @@ navbarPage( theme = shinytheme("spacelab"),
   ),
   
   
+  
+  
+  
+  
   tabPanel('Text Topic', 
            fluidPage(
              titlePanel(h1('文本主題')),
@@ -208,6 +223,10 @@ navbarPage( theme = shinytheme("spacelab"),
     
     )
   ),
+  
+  
+  
+  
   
   tabPanel('Sentiment',
            fluidPage(
@@ -270,12 +289,12 @@ navbarPage( theme = shinytheme("spacelab"),
               
               
             )
-              
-              
-              
-              
            )
   ),
+  
+  
+  
+  
   
   tabPanel('Essay Similarity', 
            fluidPage(
@@ -345,6 +364,9 @@ navbarPage( theme = shinytheme("spacelab"),
       )
 ),
   
+
+
+
   tabPanel('Clustering', 
            fluidPage(
              titlePanel(h1('文本分群')),
@@ -376,13 +398,13 @@ navbarPage( theme = shinytheme("spacelab"),
     )
   ),
 
-  # ('author_follower_num','author_followee_num','author_upvote_num','author_thank_num','author_answer_num','author_question_num','author_post_num',
-  #'n_char','n_word','n_stop','per_stop','senti_score','quality')
+
+
+
   
   tabPanel('SVM',
            fluidPage(
            mainPanel(
-             includeHTML("./final/zhihu_final.html"),
              HTML("<center><br><hr><br>"),
              textOutput('svm_question_title'),
              HTML("<hr>"),
@@ -402,7 +424,8 @@ navbarPage( theme = shinytheme("spacelab"),
              HTML("<font size='7' color='coral'>"),
              textOutput('svm_ans_quality'),
              HTML("</font>"),
-             HTML("<br><hr><br></center>")
+             HTML("<br><hr><br></center>"),
+             includeHTML("./final/zhihu_final.html")
              
            )
            )),
@@ -410,6 +433,9 @@ navbarPage( theme = shinytheme("spacelab"),
   #tabPanel('Team Member')
   
 
+
+
+  # To hide error message
   tags$style(type="text/css",
              ".shiny-output-error { visibility: hidden; }",
              ".shiny-output-error:before { visibility: hidden; }"

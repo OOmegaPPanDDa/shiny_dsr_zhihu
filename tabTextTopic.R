@@ -1,12 +1,7 @@
-source('zhihu_preprocessing.R')
-
-library(wordcloud)
-library(dplyr)
 library(RTextTools)
 library(topicmodels)
-library(tidytext)
 
-
+# 主題文字雲
 output$text_topic_word_cloud <- renderPlot({
   text_topic_data <<- all_data %>% filter(topic == input$text_topic_topic)
   
@@ -41,37 +36,9 @@ output$text_topic_word_cloud <- renderPlot({
 
 
 
-output$text_topic_question_ui <- renderUI({
-  input$text_topic_topic
-  
-  selectInput('text_topic_question', choices = unique(text_topic_data$question_title), label = '請選擇一個問題', multiple = FALSE)
-})
 
 
-output$text_topic_question_detail <- renderText({
-  
-  input$text_topic_topic
-  
-  question_detail <- subset(text_topic_data, question_title == input$text_topic_question)$question_detail[1]
-  question_detail <- clean_text(question_detail)
-  question_detail
-})
-
-
-output$text_topic_answer <- renderTable({
-  
-  input$text_topic_topic
-  
-  question <- subset(text_topic_data, question_title == input$text_topic_question)
-  ans_df <- question %>% 
-    select(ans, ans_upvote_num) %>%
-    arrange(desc(ans_upvote_num))
-  
-  ans_df$ans <- sapply(ans_df$ans, function(x) clean_text(x))
-  colnames(ans_df) <- c('Ans','Upvote')
-  head(ans_df)
-})
-
+# 主題 LDA 探勘子主題
 output$text_topic_lda <- renderPlot({
   
   input$text_topic_topic
@@ -128,7 +95,7 @@ output$text_topic_lda <- renderPlot({
 })
 
 
-
+# 主題 tf-idf 抽取關鍵詞
 output$text_topic_tf_idf <- renderPlot({
   
   input$text_topic_topic
@@ -159,8 +126,10 @@ output$text_topic_tf_idf <- renderPlot({
   data_words <- data_words %>% arrange(id)
   #View(data_words[data_words$tf >= 1,])
   
-  ggplot(data_words %>% 
-           top_n(15),
+  the_data <- data_words %>% 
+    top_n(15)
+  
+  ggplot(the_data[1:15,],
          aes(x = word, y = tf_idf)) +
     geom_bar(aes(alpha = tf_idf), 
              stat="identity", 
@@ -171,8 +140,42 @@ output$text_topic_tf_idf <- renderPlot({
     scale_alpha_continuous(range = c(0.6, 1), guide = FALSE) + 
     theme(text = element_text(size = 20, family= 'Arial Unicode MS'))
   
-  
-  
 })
+
+
+
+output$text_topic_question_ui <- renderUI({
+  input$text_topic_topic
+  
+  selectInput('text_topic_question', choices = unique(text_topic_data$question_title), label = '請選擇一個問題', multiple = FALSE)
+})
+
+
+output$text_topic_question_detail <- renderText({
+  
+  input$text_topic_topic
+  
+  question_detail <- subset(text_topic_data, question_title == input$text_topic_question)$question_detail[1]
+  question_detail <- clean_text(question_detail)
+  question_detail
+})
+
+
+output$text_topic_answer <- renderTable({
+  
+  input$text_topic_topic
+  
+  question <- subset(text_topic_data, question_title == input$text_topic_question)
+  ans_df <- question %>% 
+    select(ans, ans_upvote_num) %>%
+    arrange(desc(ans_upvote_num))
+  
+  ans_df$ans <- sapply(ans_df$ans, function(x) clean_text(x))
+  colnames(ans_df) <- c('Ans','Upvote')
+  head(ans_df)
+})
+
+
+
 
 

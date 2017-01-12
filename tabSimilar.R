@@ -46,6 +46,11 @@ output$similar_ans_detail <- renderText({
   ans_detail
 })
 
+
+
+
+
+#  相似度
 output$similar_similarity <- renderText({
   input$similar_topic
   input$similar_question
